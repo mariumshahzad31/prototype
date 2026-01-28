@@ -1,0 +1,2 @@
+# System-level dependencies for Streamlit Cloud
+# (uncomment if needed for network/system libraries)
