@@ -915,9 +915,9 @@ def main() -> None:
             """
             <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:1rem;">
                 <div>
-                    <div class="neon-header neon-glow">AURA Control Center</div>
+                    <div class="neon-header neon-glow">Control Center</div>
                     <div style="font-size:0.80rem;color:#8BA1C4;">
-                        Real-time telemetry and behavioral insights from the monitoring engine.
+                        System status and recent activity.
                     </div>
                 </div>
             </div>
@@ -932,10 +932,10 @@ def main() -> None:
                 """
                 <div class="glass-card">
                     <div class="glass-card-header">
-                        <div class="glass-card-title">Real-time Traffic Surface</div>
+                        <div class="glass-card-title">Live Traffic</div>
                         <div class="metric-chip">
                             <span class="chip-dot"></span>
-                            Live Telemetry
+                            Active
                         </div>
                     </div>
                 """,
@@ -965,7 +965,7 @@ def main() -> None:
             else:
                 st.markdown(
                     """<div class="xai-alert-text">
-The system is building a profile of normal activity. When unusual activity appears, this panel will provide a clear explanation.
+Waiting for activity to analyze.
                     </div>""",
                     unsafe_allow_html=True,
                 )
@@ -1107,16 +1107,16 @@ The system is building a profile of normal activity. When unusual activity appea
     elif nav_option == "Algorithm Visualization":
         st.markdown(
             """
-            <div class="neon-header neon-glow">System Visualization</div>
+            <div class="neon-header neon-glow">System Architecture</div>
             <div style="font-size:0.80rem;color:#8BA1C4;margin-bottom:1.5rem;">
-            Visual representation of the system's learning and protection mechanisms.
+            Core components and workflows.
             </div>
             """,
             unsafe_allow_html=True,
         )
 
         st.markdown(
-            "<div class='glass-card-title' style='margin-bottom:1rem;'>Complete System Flow</div>",
+            "<div class='glass-card-title' style='margin-bottom:1rem;'>System Flow</div>",
             unsafe_allow_html=True,
         )
 
@@ -1131,9 +1131,9 @@ The system is building a profile of normal activity. When unusual activity appea
             st.markdown(
                 """
                 <div class="glass-card">
-                    <div class="glass-card-title">Pattern Extraction</div>
+                    <div class="glass-card-title">Pattern Detection</div>
                     <p style="font-size:0.75rem;color:#8BA1C4;margin-top:0.5rem;">
-                    Models extract patterns from network activity to help identify unusual behavior.
+                    Identifies network patterns and anomalies.
                     </p>
                 </div>
                 """,
@@ -1144,9 +1144,9 @@ The system is building a profile of normal activity. When unusual activity appea
             st.markdown(
                 """
                 <div class="glass-card">
-                    <div class="glass-card-title">Temporal Analysis</div>
+                    <div class="glass-card-title">Temporal Models</div>
                     <p style="font-size:0.75rem;color:#8BA1C4;margin-top:0.5rem;">
-                    Temporal models learn activity rhythms over time to detect deviations from normal patterns.
+                    Learns timing patterns and detects deviations.
                     </p>
                 </div>
                 """,
@@ -1159,7 +1159,7 @@ The system is building a profile of normal activity. When unusual activity appea
                 <div class="glass-card">
                     <div class="glass-card-title">Decision Engine</div>
                     <p style="font-size:0.75rem;color:#8BA1C4;margin-top:0.5rem;">
-                    Decision models combine multiple signals to produce final recommendations for action.
+                    Combines signals for final recommendations.
                     </p>
                 </div>
                 """,
@@ -1184,9 +1184,9 @@ The system is building a profile of normal activity. When unusual activity appea
     elif nav_option == "Real-Time Monitoring":
         st.markdown(
             """
-            <div class="neon-header neon-glow">Real-Time Network Monitoring</div>
+            <div class="neon-header neon-glow">Network Monitoring</div>
             <div style="font-size:0.80rem;color:#8BA1C4;margin-bottom:1.5rem;">
-            Live telemetry and behavioral monitoring across all nodes.
+            Live system telemetry.
             </div>
             """,
             unsafe_allow_html=True,
@@ -1218,9 +1218,9 @@ The system is building a profile of normal activity. When unusual activity appea
     elif nav_option == "Mobile Companion":
         st.markdown(
             """
-            <div class="neon-header neon-glow">AURA Mobile Companion</div>
+            <div class="neon-header neon-glow">Mobile View</div>
             <div style="font-size:0.80rem;color:#8BA1C4;margin-bottom:1.5rem;">
-            On-the-go alerts and quick remote response.
+            Quick status and alerts.
             </div>
             """,
             unsafe_allow_html=True,
@@ -1273,9 +1273,9 @@ The system is building a profile of normal activity. When unusual activity appea
     elif nav_option == "Firewall Controls":
         st.markdown(
             """
-            <div class="neon-header neon-glow">Firewall Management</div>
+            <div class="neon-header neon-glow">Controls</div>
             <div style="font-size:0.80rem;color:#8BA1C4;margin-bottom:1.5rem;">
-            Advanced response controls and sensitivity tuning.
+            Response rules and sensitivity.
             </div>
             """,
             unsafe_allow_html=True,
