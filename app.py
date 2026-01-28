@@ -869,7 +869,6 @@ def main() -> None:
                 "Unified Control Center",
                 "Algorithm Visualization",
                 "Real-Time Monitoring",
-                "Threat Analytics",
                 "Mobile Companion",
                 "Firewall Controls",
             ],
@@ -1215,42 +1214,6 @@ The system is building a profile of normal activity. When unusual activity appea
             nodes = get_device_status()
             online_count = sum(1 for n in nodes.values() if n.get('status') == 'online')
             st.metric("🔗 Nodes", f"{online_count}/{len(nodes)}")
-
-    elif nav_option == "Threat Analytics":
-        st.markdown(
-            """
-            <div class="neon-header neon-glow">Unusual Activity History</div>
-            <div style="font-size:0.80rem;color:#8BA1C4;margin-bottom:1.5rem;">
-            See all the unusual events the firewall has detected.
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-
-        timeline = build_threat_timeline(events)
-
-        st.markdown(
-            "<div class='glass-card-title' style='margin-bottom:1rem;'>Recent Events (Latest First)</div>",
-            unsafe_allow_html=True,
-        )
-
-        if not timeline:
-            st.success("✓ No unusual activity found.")
-        else:
-            for threat in timeline[:10]:
-                severity_color = '#FF4949' if threat['severity'] == 'HIGH' else '#FFD700'
-                st.markdown(
-                    f"""
-                    <div class="threat-widget">
-                        <div class="threat-level-{threat['severity'].lower()}">{threat['severity']} Risk</div>
-                        <div style="font-size:0.70rem;color:#8BA1C4;margin-top:0.2rem;">
-                        Risk score: {threat['score']:.3f} | From: {threat['source_ip']} | Node: {threat['node']}
-                        </div>
-                        <div style="font-size:0.70rem;color:#7087A9;margin-top:0.1rem;">Time: {threat['time_str']}</div>
-                    </div>
-                    """,
-                    unsafe_allow_html=True,
-                )
 
     elif nav_option == "Mobile Companion":
         st.markdown(
